@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Controllers/CameraViewController.h"
+#import "Controllers/CallibrationViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CameraViewController *cvc = [[CameraViewController alloc]init];
+    CallibrationViewController *cvc = [[CallibrationViewController alloc]init];
+    //UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cvc];
     [self.window setRootViewController:cvc];
     [self.window makeKeyAndVisible];
     return YES;

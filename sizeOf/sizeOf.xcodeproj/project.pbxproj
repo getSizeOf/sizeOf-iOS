@@ -14,6 +14,10 @@
 		01BAC7D01AE2CF55007DFA6C /* sizeOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7CF1AE2CF55007DFA6C /* sizeOfTests.m */; };
 		01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */; };
 		01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */; };
+		01BAC7E71AE2DB8E007DFA6C /* CallibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */; };
+		01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */; };
+		01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */; };
+		01BAC7EC1AE2DBF0007DFA6C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,11 @@
 		01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = sizeOf/Controllers/CameraViewController.h; sourceTree = "<group>"; };
 		01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = sizeOf/Controllers/CameraViewController.m; sourceTree = "<group>"; };
 		01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CameraViewController.xib; path = sizeOf/Controllers/CameraViewController.xib; sourceTree = "<group>"; };
+		01BAC7E41AE2DB8E007DFA6C /* CallibrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallibrationViewController.h; path = sizeOf/Controllers/CallibrationViewController.h; sourceTree = "<group>"; };
+		01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallibrationViewController.m; path = sizeOf/Controllers/CallibrationViewController.m; sourceTree = "<group>"; };
+		01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallibrationViewController.xib; path = sizeOf/Controllers/CallibrationViewController.xib; sourceTree = "<group>"; };
+		01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BAC7EC1AE2DBF0007DFA6C /* CoreImage.framework in Frameworks */,
+				01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,7 @@
 		01BAC7A71AE2CF55007DFA6C = {
 			isa = PBXGroup;
 			children = (
+				01BAC7ED1AE2DBF6007DFA6C /* Frameworks */,
 				01BAC7DE1AE2D3B9007DFA6C /* Controllers */,
 				01BAC7B21AE2CF55007DFA6C /* sizeOf */,
 				01BAC7CC1AE2CF55007DFA6C /* sizeOfTests */,
@@ -123,8 +135,20 @@
 				01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */,
 				01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */,
 				01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */,
+				01BAC7E41AE2DB8E007DFA6C /* CallibrationViewController.h */,
+				01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */,
+				01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		01BAC7ED1AE2DBF6007DFA6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */,
+				01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +233,7 @@
 			files = (
 				01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */,
 				01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */,
+				01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */,
 				01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +254,7 @@
 			files = (
 				01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */,
 				01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */,
+				01BAC7E71AE2DB8E007DFA6C /* CallibrationViewController.m in Sources */,
 				01BAC7B61AE2CF55007DFA6C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +438,7 @@
 				01BAC7D51AE2CF55007DFA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01BAC7D61AE2CF55007DFA6C /* Build configuration list for PBXNativeTarget "sizeOfTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +447,7 @@
 				01BAC7D81AE2CF55007DFA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
