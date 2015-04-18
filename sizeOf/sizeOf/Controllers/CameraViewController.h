@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CameraViewController.h
 //  sizeOf
 //
 //  Created by Nick Peretti on 4/18/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CameraViewController : UIViewController
 
 @end
-

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		01BAC7B61AE2CF55007DFA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7B51AE2CF55007DFA6C /* main.m */; };
 		01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7B81AE2CF55007DFA6C /* AppDelegate.m */; };
-		01BAC7BC1AE2CF55007DFA6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7BB1AE2CF55007DFA6C /* ViewController.m */; };
-		01BAC7BF1AE2CF55007DFA6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7BD1AE2CF55007DFA6C /* Main.storyboard */; };
 		01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7C01AE2CF55007DFA6C /* Images.xcassets */; };
 		01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7C21AE2CF55007DFA6C /* LaunchScreen.xib */; };
 		01BAC7D01AE2CF55007DFA6C /* sizeOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7CF1AE2CF55007DFA6C /* sizeOfTests.m */; };
+		01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */; };
+		01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		01BAC7B51AE2CF55007DFA6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01BAC7B71AE2CF55007DFA6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01BAC7B81AE2CF55007DFA6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01BAC7BA1AE2CF55007DFA6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		01BAC7BB1AE2CF55007DFA6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		01BAC7BE1AE2CF55007DFA6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01BAC7C01AE2CF55007DFA6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01BAC7C31AE2CF55007DFA6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01BAC7C91AE2CF55007DFA6C /* sizeOfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sizeOfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BAC7CE1AE2CF55007DFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BAC7CF1AE2CF55007DFA6C /* sizeOfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sizeOfTests.m; sourceTree = "<group>"; };
+		01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = sizeOf/Controllers/CameraViewController.h; sourceTree = "<group>"; };
+		01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = sizeOf/Controllers/CameraViewController.m; sourceTree = "<group>"; };
+		01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CameraViewController.xib; path = sizeOf/Controllers/CameraViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,7 @@
 		01BAC7A71AE2CF55007DFA6C = {
 			isa = PBXGroup;
 			children = (
+				01BAC7DE1AE2D3B9007DFA6C /* Controllers */,
 				01BAC7B21AE2CF55007DFA6C /* sizeOf */,
 				01BAC7CC1AE2CF55007DFA6C /* sizeOfTests */,
 				01BAC7B11AE2CF55007DFA6C /* Products */,
@@ -83,9 +84,6 @@
 			children = (
 				01BAC7B71AE2CF55007DFA6C /* AppDelegate.h */,
 				01BAC7B81AE2CF55007DFA6C /* AppDelegate.m */,
-				01BAC7BA1AE2CF55007DFA6C /* ViewController.h */,
-				01BAC7BB1AE2CF55007DFA6C /* ViewController.m */,
-				01BAC7BD1AE2CF55007DFA6C /* Main.storyboard */,
 				01BAC7C01AE2CF55007DFA6C /* Images.xcassets */,
 				01BAC7C21AE2CF55007DFA6C /* LaunchScreen.xib */,
 				01BAC7B31AE2CF55007DFA6C /* Supporting Files */,
@@ -117,6 +115,16 @@
 				01BAC7CE1AE2CF55007DFA6C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01BAC7DE1AE2D3B9007DFA6C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */,
+				01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */,
+				01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BAC7BF1AE2CF55007DFA6C /* Main.storyboard in Resources */,
+				01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */,
 				01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */,
 				01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */,
 			);
@@ -219,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BAC7BC1AE2CF55007DFA6C /* ViewController.m in Sources */,
+				01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */,
 				01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */,
 				01BAC7B61AE2CF55007DFA6C /* main.m in Sources */,
 			);
@@ -244,14 +252,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01BAC7BD1AE2CF55007DFA6C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01BAC7BE1AE2CF55007DFA6C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01BAC7C21AE2CF55007DFA6C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
