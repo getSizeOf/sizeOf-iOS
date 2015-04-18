@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface CallibrationViewController : UIViewController
+@interface CallibrationViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic,strong) AVCaptureSession *captureSession;
 @property (nonatomic,strong) AVCaptureDevice *captureDevice;
 @property (nonatomic,strong) AVCaptureDeviceInput *captureInput;
 @property (nonatomic,strong) AVCaptureVideoPreviewLayer *capturePreviewLayer;
+@property (nonatomic,strong) AVCaptureConnection *captureConnection;
 
 @property (weak, nonatomic) IBOutlet UIButton *stepDownBtn;
 @property (weak, nonatomic) IBOutlet UIButton *stepUpBtn;
@@ -22,5 +23,6 @@
 
 - (IBAction)stepDown:(id)sender;
 - (IBAction)stepUp:(id)sender;
+- (IBAction)addDataPoint:(id)sender;
 
 @end
