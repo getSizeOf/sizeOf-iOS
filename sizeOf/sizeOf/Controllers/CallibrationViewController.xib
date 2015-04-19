@@ -76,6 +76,13 @@
                         <action selector="emailData:" destination="-1" eventType="touchUpInside" id="AQ9-eb-3Vz"/>
                     </connections>
                 </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="smR-gW-70q">
+                    <rect key="frame" x="43" y="126" width="271" height="31"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="sliderSlid:" destination="-1" eventType="valueChanged" id="t9Y-JJ-0ZF"/>
+                    </connections>
+                </slider>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

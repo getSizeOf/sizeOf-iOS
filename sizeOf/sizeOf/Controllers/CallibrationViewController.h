@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *stepDownBtn;
 @property (weak, nonatomic) IBOutlet UIButton *stepUpBtn;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+- (IBAction)sliderSlid:(id)sender;
 
 - (IBAction)stepDown:(id)sender;
 - (IBAction)stepUp:(id)sender;

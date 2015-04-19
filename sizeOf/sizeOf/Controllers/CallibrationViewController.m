@@ -28,7 +28,7 @@
     self = [super initWithNibName:@"CallibrationViewController" bundle:nil];
     if (self) {
         focalLength = 0.500000;
-        stepperLength = 0.001;
+        stepperLength = 0.01;
         margin = 40.0;
         dataPoints = [[NSMutableDictionary alloc]init];
         count = 0;
@@ -111,6 +111,16 @@
     }
 }
 
+
+- (IBAction)sliderSlid:(id)sender {
+    float completion = [(UISlider *)sender value];
+    if ([[self captureDevice] lockForConfiguration:nil]){
+    [[self captureDevice] setFocusMode:AVCaptureFocusModeLocked];
+    float zoom  = 1.0 + 12.0 * completion;
+    [[self captureDevice] setVideoZoomFactor:zoom];
+    [[self captureDevice] unlockForConfiguration];
+    }
+}
 
 - (IBAction)stepDown:(id)sender {
     
