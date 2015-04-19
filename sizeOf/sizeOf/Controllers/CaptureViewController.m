@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     cameraButton.layer.cornerRadius = cameraButton.frame.size.width*0.5;
-    self.title = @"Take Picture";
+    self.title = @"Camera";
     
     
     captureSession = [[AVCaptureSession alloc]init];

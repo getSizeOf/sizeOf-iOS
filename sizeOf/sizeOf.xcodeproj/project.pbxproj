@@ -10,6 +10,7 @@
 		011EC7431AE3941200AD2E19 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011EC7421AE3941200AD2E19 /* CoreMotion.framework */; };
 		011EC7471AE39FB200AD2E19 /* PointSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011EC7451AE39FB200AD2E19 /* PointSelectorViewController.m */; };
 		011EC7481AE39FB200AD2E19 /* PointSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EC7461AE39FB200AD2E19 /* PointSelectorViewController.xib */; };
+		011EC74A1AE3D4DB00AD2E19 /* sizeOf.png in Resources */ = {isa = PBXBuildFile; fileRef = 011EC7491AE3D4DB00AD2E19 /* sizeOf.png */; };
 		01BAC7B61AE2CF55007DFA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7B51AE2CF55007DFA6C /* main.m */; };
 		01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7B81AE2CF55007DFA6C /* AppDelegate.m */; };
 		01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7C01AE2CF55007DFA6C /* Images.xcassets */; };
@@ -42,6 +43,7 @@
 		011EC7441AE39FB200AD2E19 /* PointSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointSelectorViewController.h; path = sizeOf/Controllers/PointSelectorViewController.h; sourceTree = "<group>"; };
 		011EC7451AE39FB200AD2E19 /* PointSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointSelectorViewController.m; path = sizeOf/Controllers/PointSelectorViewController.m; sourceTree = "<group>"; };
 		011EC7461AE39FB200AD2E19 /* PointSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointSelectorViewController.xib; path = sizeOf/Controllers/PointSelectorViewController.xib; sourceTree = "<group>"; };
+		011EC7491AE3D4DB00AD2E19 /* sizeOf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sizeOf.png; sourceTree = "<group>"; };
 		01BAC7B01AE2CF55007DFA6C /* sizeOf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sizeOf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BAC7B41AE2CF55007DFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BAC7B51AE2CF55007DFA6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		01BAC7B31AE2CF55007DFA6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				011EC7491AE3D4DB00AD2E19 /* sizeOf.png */,
 				01BAC7B41AE2CF55007DFA6C /* Info.plist */,
 				01BAC7B51AE2CF55007DFA6C /* main.m */,
 			);
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011EC74A1AE3D4DB00AD2E19 /* sizeOf.png in Resources */,
 				01E8B1AB1AE3567800C128CE /* PointsViewController.xib in Resources */,
 				01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */,
 				01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */,

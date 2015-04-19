@@ -61,8 +61,8 @@
     [self.view addSubview:box];
     
     statusLabel.text = @"";
-    statusLabel.numberOfLines = 2;
-    
+    statusLabel.numberOfLines = 3;
+    statusLabel.frame = CGRectMake(0, bg.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-bg.frame.size.height);
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -141,7 +141,7 @@
     //double objWidth = objectWidth(dist, pixelWidth, sensorWidth, fLenEff, subWidth);
     double objWidth = [self objectWidth:dist pixelWidth:pixelWidth sensorWidth:sensorWidth fleneff:fLenEff subW:(double)pixelSize.height];
     
-    statusLabel.text = [NSString stringWithFormat:@"Width = %f Meters \n Height = %f Meters",objHeight,objWidth];
+    statusLabel.text = [NSString stringWithFormat:@" %2.5f Lens -> %f M away \n Width = %f Meters \n Height = %f Meters ",lensPosition,dist,objHeight,objWidth];
     
     
 }
@@ -152,7 +152,7 @@
         return (((5868*(pow(lensPos,5.0)))-(8131*(pow(lensPos,4.0)))+(4139*(pow(lensPos,3.0)))-(860.4*(pow(lensPos,2.0)))+(80.56 * lensPos) + 7.717)/100);
     }
     else{
-        return (((3036.667*lensPos)-2006.3)/100);
+        return (((370.0*lensPos)-166.3)/100);
     }
 }
 
