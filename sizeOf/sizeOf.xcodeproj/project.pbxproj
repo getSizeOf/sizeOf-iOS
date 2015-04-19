@@ -18,6 +18,7 @@
 		01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */; };
 		01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */; };
 		01BAC7EC1AE2DBF0007DFA6C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */; };
+		01BAC7EF1AE32444007DFA6C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7EE1AE32444007DFA6C /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallibrationViewController.xib; path = sizeOf/Controllers/CallibrationViewController.xib; sourceTree = "<group>"; };
 		01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		01BAC7EE1AE32444007DFA6C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BAC7EF1AE32444007DFA6C /* MessageUI.framework in Frameworks */,
 				01BAC7EC1AE2DBF0007DFA6C /* CoreImage.framework in Frameworks */,
 				01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */,
 			);
@@ -145,6 +148,7 @@
 		01BAC7ED1AE2DBF6007DFA6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01BAC7EE1AE32444007DFA6C /* MessageUI.framework */,
 				01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */,
 				01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */,
 			);

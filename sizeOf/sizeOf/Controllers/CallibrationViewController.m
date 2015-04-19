@@ -14,6 +14,8 @@
     float margin;
     CGPoint startPoint;
     AVCaptureDeviceFormat *currentFormat;
+    NSMutableDictionary *dataPoints;
+    int count;
 }
 
 @end
@@ -28,6 +30,8 @@
         focalLength = 0.500000;
         stepperLength = 0.001;
         margin = 40.0;
+        dataPoints = [[NSMutableDictionary alloc]init];
+        count = 0;
     }
     return self;
 }
@@ -132,9 +136,77 @@
     lert.delegate = self;
     [lert show];
 }
+
+- (IBAction)emailData:(id)sender {
+    NSString *path = [[self applicationDocumentsDirectory].path
+                      stringByAppendingPathComponent:@"distances.plist"];
+    [self showEmail:path];    
+}
+
+- (void)showEmail:(NSString*)file {
+    
+    NSString *emailTitle = @"Lens Data";
+    NSString *messageBody = @"Here is the lens data";
+    NSArray *toRecipents = @[@"nicholasperetti@gmail.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Determine the file name and extension
+    NSString *filename = @"distances";
+
+    
+    // Get the resource path and read the file using NSData
+    //NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:extension];
+    NSData *fileData = [NSData dataWithContentsOfFile:file];
+    
+    // Determine the MIME type
+    NSString *mimeType = @"application/xml";
+    
+    // Add attachment
+    [mc addAttachmentData:fileData mimeType:mimeType fileName:filename];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex!=alertView.cancelButtonIndex) {
-        NSLog(@"%f-CM for %f-Lens",[[alertView textFieldAtIndex:0].text floatValue],[[self captureDevice] lensPosition]);
+        NSNumber *distance = [NSNumber numberWithFloat:[[alertView textFieldAtIndex:0].text floatValue]];
+        NSNumber *lensPost = [NSNumber numberWithFloat:[[self captureDevice] lensPosition]];
+        [dataPoints setObject:@[distance,lensPost] forKey:[NSString stringWithFormat:@"%i",count]];
+        count++;
+        NSString *path = [[self applicationDocumentsDirectory].path
+                          stringByAppendingPathComponent:@"distances.plist"];
+        [dataPoints writeToFile:path atomically:YES];
     }
 }
 
@@ -150,4 +222,9 @@
     focalLength = (p.y-(stepUpBtn.frame.origin.y+stepUpBtn.frame.size.height+margin))/((self.view.frame.size.height-margin)-(stepUpBtn.frame.origin.y+stepUpBtn.frame.size.height+margin));
     [self focusToLength:focalLength withDevice:[self captureDevice]];
 }
+- (NSURL *)applicationDocumentsDirectory {
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
+                                                   inDomains:NSUserDomainMask] lastObject];
+}
+
 @end

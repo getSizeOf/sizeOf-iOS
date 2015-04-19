@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focal Length" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="utS-uk-AjA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                    <rect key="frame" x="0.0" y="0.0" width="259" height="77"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.17371961805555558" green="0.17371961805555558" blue="0.17371961805555558" alpha="0.5" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
@@ -62,6 +62,18 @@
                     </state>
                     <connections>
                         <action selector="addDataPoint:" destination="-1" eventType="touchUpInside" id="BAp-4A-ehX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mae-mp-RFo">
+                    <rect key="frame" x="259" y="0.0" width="116" height="77"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Email Data">
+                        <color key="titleShadowColor" red="0.49691358024691357" green="0.49691358024691357" blue="0.49691358024691357" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="emailData:" destination="-1" eventType="touchUpInside" id="AQ9-eb-3Vz"/>
                     </connections>
                 </button>
             </subviews>

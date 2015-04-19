@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MessageUI/MessageUI.h>
 
-@interface CallibrationViewController : UIViewController <UIAlertViewDelegate>
+@interface CallibrationViewController : UIViewController <UIAlertViewDelegate,MFMailComposeViewControllerDelegate>
 
 @property (nonatomic,strong) AVCaptureSession *captureSession;
 @property (nonatomic,strong) AVCaptureDevice *captureDevice;
@@ -24,5 +25,6 @@
 - (IBAction)stepDown:(id)sender;
 - (IBAction)stepUp:(id)sender;
 - (IBAction)addDataPoint:(id)sender;
+- (IBAction)emailData:(id)sender;
 
 @end
