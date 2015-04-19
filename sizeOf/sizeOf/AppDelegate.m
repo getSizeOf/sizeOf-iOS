@@ -22,6 +22,7 @@
     CaptureViewController *cvc = [[CaptureViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cvc];
     [nav.navigationBar setTintColor:[UIColor whiteColor]];
+    nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:22]};
     [nav.navigationBar setBarTintColor:[UIColor colorWithRed:0.092 green:0.482 blue:0.920 alpha:1.000]];
     [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];

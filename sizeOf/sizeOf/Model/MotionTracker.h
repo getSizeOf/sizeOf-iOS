@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface MotionTracker : NSObject
+
+-(instancetype)initWithHandler:(void(^)(float x,float y,float z))handler;
 
 @end

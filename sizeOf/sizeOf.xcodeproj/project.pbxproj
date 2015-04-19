@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011EC7431AE3941200AD2E19 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011EC7421AE3941200AD2E19 /* CoreMotion.framework */; };
+		011EC7471AE39FB200AD2E19 /* PointSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011EC7451AE39FB200AD2E19 /* PointSelectorViewController.m */; };
+		011EC7481AE39FB200AD2E19 /* PointSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011EC7461AE39FB200AD2E19 /* PointSelectorViewController.xib */; };
 		01BAC7B61AE2CF55007DFA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7B51AE2CF55007DFA6C /* main.m */; };
 		01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7B81AE2CF55007DFA6C /* AppDelegate.m */; };
 		01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7C01AE2CF55007DFA6C /* Images.xcassets */; };
 		01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7C21AE2CF55007DFA6C /* LaunchScreen.xib */; };
 		01BAC7D01AE2CF55007DFA6C /* sizeOfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7CF1AE2CF55007DFA6C /* sizeOfTests.m */; };
-		01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */; };
-		01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */; };
 		01BAC7E71AE2DB8E007DFA6C /* CallibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */; };
 		01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */; };
 		01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */; };
@@ -37,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011EC7421AE3941200AD2E19 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		011EC7441AE39FB200AD2E19 /* PointSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointSelectorViewController.h; path = sizeOf/Controllers/PointSelectorViewController.h; sourceTree = "<group>"; };
+		011EC7451AE39FB200AD2E19 /* PointSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointSelectorViewController.m; path = sizeOf/Controllers/PointSelectorViewController.m; sourceTree = "<group>"; };
+		011EC7461AE39FB200AD2E19 /* PointSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointSelectorViewController.xib; path = sizeOf/Controllers/PointSelectorViewController.xib; sourceTree = "<group>"; };
 		01BAC7B01AE2CF55007DFA6C /* sizeOf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sizeOf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BAC7B41AE2CF55007DFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BAC7B51AE2CF55007DFA6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,9 +52,6 @@
 		01BAC7C91AE2CF55007DFA6C /* sizeOfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sizeOfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BAC7CE1AE2CF55007DFA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BAC7CF1AE2CF55007DFA6C /* sizeOfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sizeOfTests.m; sourceTree = "<group>"; };
-		01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = sizeOf/Controllers/CameraViewController.h; sourceTree = "<group>"; };
-		01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = sizeOf/Controllers/CameraViewController.m; sourceTree = "<group>"; };
-		01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CameraViewController.xib; path = sizeOf/Controllers/CameraViewController.xib; sourceTree = "<group>"; };
 		01BAC7E41AE2DB8E007DFA6C /* CallibrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallibrationViewController.h; path = sizeOf/Controllers/CallibrationViewController.h; sourceTree = "<group>"; };
 		01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallibrationViewController.m; path = sizeOf/Controllers/CallibrationViewController.m; sourceTree = "<group>"; };
 		01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallibrationViewController.xib; path = sizeOf/Controllers/CallibrationViewController.xib; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011EC7431AE3941200AD2E19 /* CoreMotion.framework in Frameworks */,
 				01BAC7EF1AE32444007DFA6C /* MessageUI.framework in Frameworks */,
 				01BAC7EC1AE2DBF0007DFA6C /* CoreImage.framework in Frameworks */,
 				01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */,
@@ -152,9 +155,9 @@
 				01E8B1AC1AE3851200C128CE /* CaptureViewController.h */,
 				01E8B1AD1AE3851200C128CE /* CaptureViewController.m */,
 				01E8B1AE1AE3851200C128CE /* CaptureViewController.xib */,
-				01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */,
-				01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */,
-				01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */,
+				011EC7441AE39FB200AD2E19 /* PointSelectorViewController.h */,
+				011EC7451AE39FB200AD2E19 /* PointSelectorViewController.m */,
+				011EC7461AE39FB200AD2E19 /* PointSelectorViewController.xib */,
 				01BAC7E41AE2DB8E007DFA6C /* CallibrationViewController.h */,
 				01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */,
 				01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */,
@@ -168,6 +171,7 @@
 		01BAC7ED1AE2DBF6007DFA6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				011EC7421AE3941200AD2E19 /* CoreMotion.framework */,
 				01BAC7EE1AE32444007DFA6C /* MessageUI.framework */,
 				01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */,
 				01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */,
@@ -264,11 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */,
 				01E8B1AB1AE3567800C128CE /* PointsViewController.xib in Resources */,
 				01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */,
 				01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */,
 				01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */,
+				011EC7481AE39FB200AD2E19 /* PointSelectorViewController.xib in Resources */,
 				01E8B1B01AE3851200C128CE /* CaptureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,8 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */,
 				01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */,
+				011EC7471AE39FB200AD2E19 /* PointSelectorViewController.m in Sources */,
 				01E8B1AA1AE3567800C128CE /* PointsViewController.m in Sources */,
 				01BAC7E71AE2DB8E007DFA6C /* CallibrationViewController.m in Sources */,
 				01E8B1B31AE3873900C128CE /* MotionTracker.m in Sources */,
