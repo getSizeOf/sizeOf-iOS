@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <MessageUI/MessageUI.h>
+#import <ImageIO/ImageIO.h>
 
 @interface CallibrationViewController : UIViewController <UIAlertViewDelegate,MFMailComposeViewControllerDelegate>
 
@@ -17,6 +18,7 @@
 @property (nonatomic,strong) AVCaptureDeviceInput *captureInput;
 @property (nonatomic,strong) AVCaptureVideoPreviewLayer *capturePreviewLayer;
 @property (nonatomic,strong) AVCaptureConnection *captureConnection;
+@property (nonatomic,strong) AVCaptureStillImageOutput *stillImageOutput;
 
 @property (weak, nonatomic) IBOutlet UIButton *stepDownBtn;
 @property (weak, nonatomic) IBOutlet UIButton *stepUpBtn;

@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Controllers/CameraViewController.h"
 #import "Controllers/CallibrationViewController.h"
-
+#import "Controllers/CaptureViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,9 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CallibrationViewController *cvc = [[CallibrationViewController alloc]init];
-    //UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cvc];
-    [self.window setRootViewController:cvc];
+    CaptureViewController *cvc = [[CaptureViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cvc];
+    [nav.navigationBar setTintColor:[UIColor whiteColor]];
+    [nav.navigationBar setBarTintColor:[UIColor colorWithRed:0.092 green:0.482 blue:0.920 alpha:1.000]];
+    [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
     return YES;
 }

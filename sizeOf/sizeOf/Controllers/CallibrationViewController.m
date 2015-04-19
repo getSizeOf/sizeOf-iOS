@@ -7,6 +7,7 @@
 //
 
 #import "CallibrationViewController.h"
+#import "PointsViewController.h"
 
 @interface CallibrationViewController () {
     float focalLength;
@@ -16,13 +17,14 @@
     AVCaptureDeviceFormat *currentFormat;
     NSMutableDictionary *dataPoints;
     int count;
+    UIImage *capturedImage;
 }
 
 @end
 
 @implementation CallibrationViewController
 
-@synthesize captureSession,captureDevice,captureInput,capturePreviewLayer,titleLabel,stepDownBtn,stepUpBtn,captureConnection;
+@synthesize captureSession,captureDevice,captureInput,capturePreviewLayer,titleLabel,stepDownBtn,stepUpBtn,captureConnection,stillImageOutput;
 
 -(instancetype)init{
     self = [super initWithNibName:@"CallibrationViewController" bundle:nil];
@@ -73,6 +75,11 @@
         NSLog(@"capture device is lame");
     }
     
+    stillImageOutput = [[AVCaptureStillImageOutput alloc]init];
+    if ([captureSession canAddOutput:stillImageOutput]) {
+        [captureSession addOutput:stillImageOutput];
+    }
+    
     capturePreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:[self captureSession]];
     [self.view.layer insertSublayer:capturePreviewLayer atIndex:0];
     CGRect bounds=self.view.layer.bounds;
@@ -82,7 +89,7 @@
     [captureSession startRunning];
     [self configureDevice:[self captureDevice]];
 
-    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pointesPicked:) name:@"pickedPointes" object:nil];
     
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -138,13 +145,48 @@
 }
 
 - (IBAction)addDataPoint:(id)sender {
-    UIAlertView *lert = [[UIAlertView alloc]initWithTitle:@"New Data Point" message:[NSString stringWithFormat:@"Lens position of %2.9f",[[self captureDevice] lensPosition]] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
-    lert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    UITextField *field = [lert textFieldAtIndex:0];
-    field.placeholder = @"Enter distance in CM";
-    field.keyboardType = UIKeyboardTypeDecimalPad;
-    lert.delegate = self;
-    [lert show];
+    
+    AVCaptureConnection *videoConnection = nil;
+    for (AVCaptureConnection *connection in stillImageOutput.connections)
+    {
+        for (AVCaptureInputPort *port in [connection inputPorts])
+        {
+            if ([[port mediaType] isEqual:AVMediaTypeVideo] )
+            {
+                videoConnection = connection;
+                break;
+            }
+        }
+        if (videoConnection) { break; }
+    }
+    
+    [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        
+        
+        CFDictionaryRef exifAttachments = CMGetAttachment( imageDataSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+        if (exifAttachments)
+        {
+            // Do something with the attachments.
+            NSLog(@"attachements: %@", exifAttachments);
+        }
+        else{
+            NSLog(@"no attachments");
+        }
+        NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+        capturedImage = [[UIImage alloc] initWithData:imageData];
+        
+        
+        
+        UIAlertView *lert = [[UIAlertView alloc]initWithTitle:@"New Data Point" message:[NSString stringWithFormat:@"Lens position of %2.9f",[[self captureDevice] lensPosition]] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+        lert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        UITextField *field = [lert textFieldAtIndex:0];
+        field.placeholder = @"Enter distance in CM";
+        field.keyboardType = UIKeyboardTypeDecimalPad;
+        lert.delegate = self;
+        [lert show];
+    }];
+    
+ 
 }
 
 - (IBAction)emailData:(id)sender {
@@ -213,11 +255,39 @@
         NSNumber *distance = [NSNumber numberWithFloat:[[alertView textFieldAtIndex:0].text floatValue]];
         NSNumber *lensPost = [NSNumber numberWithFloat:[[self captureDevice] lensPosition]];
         [dataPoints setObject:@[distance,lensPost] forKey:[NSString stringWithFormat:@"%i",count]];
-        count++;
-        NSString *path = [[self applicationDocumentsDirectory].path
-                          stringByAppendingPathComponent:@"distances.plist"];
-        [dataPoints writeToFile:path atomically:YES];
+        
+        PointsViewController *pvc = [[PointsViewController alloc]initWithImage:capturedImage];
+        [self presentViewController:pvc animated:YES completion:nil];
+        
     }
+}
+
+- (void)pointesPicked:(NSNotification *)notification
+{
+    NSDictionary *dict = [notification userInfo];
+    NSArray *points = [dict valueForKey:@"points"];
+    int p1=0;
+    int p2=0;
+    int c = 0;
+    for (NSValue *v in points) {
+        CGPoint p = [v CGPointValue];
+        if (c==0) {
+            p1 = p.y;
+        }else {
+            p2 = p.y;
+        }
+        NSLog(@"%f %f",p.x,p.y);
+        c++;
+    }
+    NSLog(@"pixels height %i",abs(p2-p1));
+    
+    
+    
+    count++;
+    NSString *path = [[self applicationDocumentsDirectory].path
+                      stringByAppendingPathComponent:@"distances.plist"];
+    [dataPoints writeToFile:path atomically:YES];
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

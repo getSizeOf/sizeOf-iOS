@@ -19,6 +19,11 @@
 		01BAC7EA1AE2DBDD007DFA6C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */; };
 		01BAC7EC1AE2DBF0007DFA6C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */; };
 		01BAC7EF1AE32444007DFA6C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BAC7EE1AE32444007DFA6C /* MessageUI.framework */; };
+		01E8B1AA1AE3567800C128CE /* PointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8B1A81AE3567800C128CE /* PointsViewController.m */; };
+		01E8B1AB1AE3567800C128CE /* PointsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01E8B1A91AE3567800C128CE /* PointsViewController.xib */; };
+		01E8B1AF1AE3851200C128CE /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8B1AD1AE3851200C128CE /* CaptureViewController.m */; };
+		01E8B1B01AE3851200C128CE /* CaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01E8B1AE1AE3851200C128CE /* CaptureViewController.xib */; };
+		01E8B1B31AE3873900C128CE /* MotionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8B1B21AE3873900C128CE /* MotionTracker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,14 @@
 		01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		01BAC7EB1AE2DBF0007DFA6C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		01BAC7EE1AE32444007DFA6C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		01E8B1A71AE3567800C128CE /* PointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointsViewController.h; path = sizeOf/Controllers/PointsViewController.h; sourceTree = "<group>"; };
+		01E8B1A81AE3567800C128CE /* PointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointsViewController.m; path = sizeOf/Controllers/PointsViewController.m; sourceTree = "<group>"; };
+		01E8B1A91AE3567800C128CE /* PointsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PointsViewController.xib; path = sizeOf/Controllers/PointsViewController.xib; sourceTree = "<group>"; };
+		01E8B1AC1AE3851200C128CE /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaptureViewController.h; path = sizeOf/Controllers/CaptureViewController.h; sourceTree = "<group>"; };
+		01E8B1AD1AE3851200C128CE /* CaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaptureViewController.m; path = sizeOf/Controllers/CaptureViewController.m; sourceTree = "<group>"; };
+		01E8B1AE1AE3851200C128CE /* CaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CaptureViewController.xib; path = sizeOf/Controllers/CaptureViewController.xib; sourceTree = "<group>"; };
+		01E8B1B11AE3873900C128CE /* MotionTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionTracker.h; path = sizeOf/Model/MotionTracker.h; sourceTree = "<group>"; };
+		01E8B1B21AE3873900C128CE /* MotionTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionTracker.m; path = sizeOf/Model/MotionTracker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				01BAC7ED1AE2DBF6007DFA6C /* Frameworks */,
+				01E8B1B41AE3874000C128CE /* Model */,
 				01BAC7DE1AE2D3B9007DFA6C /* Controllers */,
 				01BAC7B21AE2CF55007DFA6C /* sizeOf */,
 				01BAC7CC1AE2CF55007DFA6C /* sizeOfTests */,
@@ -135,12 +149,18 @@
 		01BAC7DE1AE2D3B9007DFA6C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				01E8B1AC1AE3851200C128CE /* CaptureViewController.h */,
+				01E8B1AD1AE3851200C128CE /* CaptureViewController.m */,
+				01E8B1AE1AE3851200C128CE /* CaptureViewController.xib */,
 				01BAC7D91AE2D3B3007DFA6C /* CameraViewController.h */,
 				01BAC7DA1AE2D3B3007DFA6C /* CameraViewController.m */,
 				01BAC7DB1AE2D3B3007DFA6C /* CameraViewController.xib */,
 				01BAC7E41AE2DB8E007DFA6C /* CallibrationViewController.h */,
 				01BAC7E51AE2DB8E007DFA6C /* CallibrationViewController.m */,
 				01BAC7E61AE2DB8E007DFA6C /* CallibrationViewController.xib */,
+				01E8B1A71AE3567800C128CE /* PointsViewController.h */,
+				01E8B1A81AE3567800C128CE /* PointsViewController.m */,
+				01E8B1A91AE3567800C128CE /* PointsViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +173,15 @@
 				01BAC7E91AE2DBDD007DFA6C /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01E8B1B41AE3874000C128CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01E8B1B11AE3873900C128CE /* MotionTracker.h */,
+				01E8B1B21AE3873900C128CE /* MotionTracker.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BAC7DD1AE2D3B3007DFA6C /* CameraViewController.xib in Resources */,
+				01E8B1AB1AE3567800C128CE /* PointsViewController.xib in Resources */,
 				01BAC7C41AE2CF55007DFA6C /* LaunchScreen.xib in Resources */,
 				01BAC7E81AE2DB8E007DFA6C /* CallibrationViewController.xib in Resources */,
 				01BAC7C11AE2CF55007DFA6C /* Images.xcassets in Resources */,
+				01E8B1B01AE3851200C128CE /* CaptureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +289,11 @@
 			files = (
 				01BAC7DC1AE2D3B3007DFA6C /* CameraViewController.m in Sources */,
 				01BAC7B91AE2CF55007DFA6C /* AppDelegate.m in Sources */,
+				01E8B1AA1AE3567800C128CE /* PointsViewController.m in Sources */,
 				01BAC7E71AE2DB8E007DFA6C /* CallibrationViewController.m in Sources */,
+				01E8B1B31AE3873900C128CE /* MotionTracker.m in Sources */,
 				01BAC7B61AE2CF55007DFA6C /* main.m in Sources */,
+				01E8B1AF1AE3851200C128CE /* CaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
