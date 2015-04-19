@@ -20,7 +20,7 @@
 
 @implementation CaptureViewController
 
-@synthesize cameraButton,captureConnection,captureDevice,captureInput,capturePreviewLayer,captureSession,stillImageOutput;
+@synthesize cameraButton,captureConnection,captureDevice,captureInput,capturePreviewLayer,captureSession,stillImageOutput,warningLbl;
 
 
 -(instancetype)init{
@@ -36,6 +36,7 @@
     cameraButton.layer.cornerRadius = cameraButton.frame.size.width*0.5;
     self.title = @"Camera";
     
+    warningLbl.alpha = 0.0;
     
     captureSession = [[AVCaptureSession alloc]init];
     [captureSession setSessionPreset:AVCaptureSessionPresetPhoto];
@@ -89,8 +90,10 @@
     tracker = [[MotionTracker alloc]initWithHandler:^(float x, float y, float z) {
         if(y>=-1.2&&y<=-0.8){
             blurView.alpha = fabs(-1.0-y)*5.0;
+            warningLbl.alpha = (fabs(-1.0-y)*5.0)*0.25;
         }else {
             blurView.alpha = 1.0;
+            warningLbl.alpha = 1.0;
         }
         
         

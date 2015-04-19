@@ -62,7 +62,7 @@
     
     statusLabel.text = @"";
     statusLabel.numberOfLines = 3;
-    statusLabel.frame = CGRectMake(0, bg.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-bg.frame.size.height);
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -152,7 +152,12 @@
         return (((5868*(pow(lensPos,5.0)))-(8131*(pow(lensPos,4.0)))+(4139*(pow(lensPos,3.0)))-(860.4*(pow(lensPos,2.0)))+(80.56 * lensPos) + 7.717)/100);
     }
     else{
-        return (((370.0*lensPos)-166.3)/100);
+      //  return (((370.0*lensPos)-166.3)/100);
+        
+       // return (.005478 * (pow(M_E , (7.885* lensPos))));
+     //   return (.00203 * (pow(M_E , (9.362* lensPos))));
+       // return (0.00004984* (pow(M_E , (14.484* lensPos))));
+        return (0.002405* (pow(M_E , (9.012* lensPos))));
     }
 }
 

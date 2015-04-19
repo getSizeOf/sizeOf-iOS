@@ -11,6 +11,7 @@
 
 @interface CaptureViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *warningLbl;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 - (IBAction)takePicture:(id)sender;
 - (IBAction)takePictureDown:(id)sender;
